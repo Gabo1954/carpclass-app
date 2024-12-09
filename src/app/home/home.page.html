@@ -1,0 +1,61 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title class="ion-text-center">
+      <img class="img-fluid logo" src="https://duoc.modyocdn.com/uploads/d1065e11-cde5-40b4-b58f-59004919c757/original/logo_duoc.svg" alt="Logo">
+    </ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="logout()" color="danger" class="logout-button">Cerrar sesión</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <!-- Título de bienvenida -->
+  <div class="welcome-container ion-padding">
+    <h2 [@fadeIn] class="welcome-title">Bienvenido {{ userName }}</h2>
+    <p class="welcome-subtitle">Aplicación para control de asistencia <strong>"Docente"</strong></p>
+  </div>
+
+  <!-- Sección del Docente -->
+  <ion-card color="primary" class="custom-card docente-card ion-padding">
+    <div class="image-container">
+      <img alt="Docente" src="assets/image/Docentes.jpeg" class="docente-img" />
+    </div>
+    <ion-card-header>
+      <ion-card-title class="card-title">Registro de Asistencia</ion-card-title>
+    </ion-card-header>
+    <ion-card-content class="card-content">
+      <p>Bienvenido a <strong>RegistAPP6</strong>, la aplicación para visualizar las asistencias a clases en DuocUC.</p>
+      <div class="button-container ion-text-center">
+        <ion-button [@fadeIn] class="custom-button" color="tertiary" routerLink="/asistencia-docente">
+          <ion-icon slot="start" name="qr-code-outline"></ion-icon> Generar QR
+        </ion-button>
+        <ion-button [@fadeIn] class="custom-button" color="secondary" routerLink="/crear-asignatura">
+          <ion-icon slot="start" name="add-circle-outline"></ion-icon> Crear Asignatura
+        </ion-button>
+      </div>
+    </ion-card-content>
+  </ion-card>
+
+  <!-- Listado de Asignaturas -->
+  <ion-card color="light" class="custom-card asignaturas-card ion-padding">
+    <ion-card-header>
+      <ion-card-title class="ion-text-center">Mis Asignaturas</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-list lines="full">
+        <ion-item *ngFor="let asignatura of asignaturas" class="asignatura-item">
+          <ion-label>
+            <ion-icon name="book-outline" slot="start"></ion-icon> {{ asignatura.nombre }}
+          </ion-label>
+          <ion-button fill="clear" color="danger" (click)="eliminarAsignatura(asignatura.id)">
+            <ion-icon name="trash-outline" slot="icon-only"></ion-icon>
+          </ion-button>
+        </ion-item>
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

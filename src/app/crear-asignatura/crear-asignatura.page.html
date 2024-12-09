@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Crear Asignatura</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <form (ngSubmit)="guardarAsignatura()">
+    <ion-item>
+      <ion-label position="floating">Nombre de la Asignatura</ion-label>
+      <ion-input [(ngModel)]="asignatura.nombre" name="nombre" required></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Código</ion-label>
+      <ion-input [(ngModel)]="asignatura.codigo" name="codigo" required></ion-input>
+    </ion-item>
+
+    <ion-button expand="block" type="submit" color="primary">Guardar</ion-button>
+  </form>
+</ion-content>

@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>Asistencia Alumno</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="cerrarSesion()" color="danger">Cerrar sesión</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <h2 class="ion-text-center">Hola, {{ userName }}</h2>
+  <p class="ion-text-center">Selecciona una asignatura para registrar tu asistencia:</p>
+
+  <!-- Listado de asignaturas -->
+  <ion-list>
+    <ion-item *ngFor="let asignatura of asignaturas">
+      <ion-label>{{ asignatura.nombre }}</ion-label>
+      <!-- Botón para redirigir a la página de confirmación de asistencia -->
+      <ion-button color="primary" [routerLink]="['/confirmacion-asistencia']">
+        Confirmar Asistencia
+      </ion-button>
+    </ion-item>
+  </ion-list>
+
+</ion-content>

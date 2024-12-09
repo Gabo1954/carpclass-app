@@ -1,0 +1,42 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title class="ion-text-center">
+      <img class="img-fluid logo" src="https://duoc.modyocdn.com/uploads/d1065e11-cde5-40b4-b58f-59004919c757/original/logo_duoc.svg" alt="Logo">
+    </ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="logout()" color="danger" class="logout-button">Cerrar sesión</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <!-- Sección de bienvenida -->
+  <div class="welcome-container ion-padding">
+    <h2 [@fadeIn] class="welcome-title">Bienvenido, {{ userName }}</h2>
+    <p class="welcome-subtitle">Aplicación para control de asistencia <strong>"Estudiante"</strong></p>
+  </div>
+
+  <!-- Tarjeta de Asistencia -->
+  <ion-card color="primary" class="custom-card asistencia-card ion-padding">
+    <div class="image-container">
+      <img alt="Estudiantes" src="https://www.duoc.cl/wp-content/uploads/2020/06/alumnos-960x600.jpg" class="estudiantes-img" />
+    </div>
+    <ion-card-header>
+      <ion-card-title class="ion-text-center">Asistencia Alumno</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <p>Bienvenido a <strong>RegistAPP6</strong>, la aplicación para registrar tu asistencia a clases en DuocUC.</p>
+      <div class="button-container ion-text-center">
+        <ion-button [@fadeIn] class="custom-button" color="tertiary" routerLink="/asistencia-alumno">
+          <ion-icon slot="start" name="checkbox-outline"></ion-icon> Estoy presente profesor
+        </ion-button>
+        <ion-button [@fadeIn] class="secondary-button" color="secondary" href="https://experienciavivo.duoc.cl/alumnos/asistencias" target="_blank">
+          <ion-icon slot="start" name="calendar-outline"></ion-icon> Asistencia Completa
+        </ion-button>
+      </div>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

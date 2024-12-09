@@ -1,0 +1,101 @@
+/* General Styles */
+body {
+    --ion-background-color: #f2f6ff;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  /* Card Styles */
+  ion-card {
+    margin: 20px auto;
+    max-width: 380px;
+    border-radius: 20px;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+    background: linear-gradient(145deg, #ffffff, #e6eefe);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Header Styles */
+  ion-card-header {
+    background: linear-gradient(135deg, #007bff, #00d4ff);
+    text-align: center;
+    padding: 30px 20px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    color: white;
+  }
+  
+  ion-card-title h2 {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin: 0;
+    letter-spacing: 1px;
+  }
+  
+  /* Input Styles */
+  ion-item {
+    --background: #f2f6ff;
+    border-radius: 12px;
+    margin: 15px 0;
+    padding: 5px 10px;
+    box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.1), inset -2px -2px 5px rgba(255, 255, 255, 0.7);
+  }
+  
+  ion-label {
+    font-size: 0.9rem;
+    color: #555;
+  }
+  
+  ion-input {
+    font-size: 1rem;
+    color: #333;
+  }
+  
+  /* Button Styles */
+  ion-button {
+    --background: linear-gradient(135deg, #007bff, #00d4ff);
+    --background-hover: linear-gradient(135deg, #0056b3, #008fcc);
+    --border-radius: 12px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: white;
+    transition: all 0.3s ease;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2), -3px -3px 10px rgba(255, 255, 255, 0.7);
+  }
+  
+  ion-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.3), -4px -4px 15px rgba(255, 255, 255, 0.8);
+  }
+  
+  /* Link Styles */
+  a {
+    font-size: 0.9rem;
+    color: #007bff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  a:hover {
+    color: #0056b3;
+    text-decoration: underline;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 480px) {
+    ion-card {
+      max-width: 90%;
+    }
+  
+    ion-card-title h2 {
+      font-size: 1.5rem;
+    }
+  
+    ion-button {
+      font-size: 0.9rem;
+    }
+  
+    a {
+      font-size: 0.8rem;
+    }
+  }
+  

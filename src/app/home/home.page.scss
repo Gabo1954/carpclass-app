@@ -1,0 +1,56 @@
+/* General Styles */
+ion-content {
+  --background: #f4f5f8;
+}
+
+/* Header */
+.logout-button {
+  font-weight: bold;
+  border-radius: 20px;
+}
+
+/* Welcome Section */
+.welcome-container {
+  text-align: center;
+  margin-top: 20px;
+}
+.welcome-title {
+  font-size: 2rem;
+  color: #333;
+}
+.welcome-subtitle {
+  font-size: 1rem;
+  color: #666;
+}
+
+/* Docente Section */
+.docente-card {
+  margin: 20px;
+  border-radius: 15px;
+  overflow: hidden;
+}
+.image-container {
+  text-align: center;
+  padding: 15px;
+}
+.docente-img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 15px;
+}
+.button-container {
+  margin-top: 15px;
+}
+.custom-button {
+  margin: 5px;
+  width: 45%;
+}
+
+/* Asignaturas Section */
+.asignaturas-card {
+  margin: 20px;
+  border-radius: 15px;
+}
+.asignatura-item ion-icon {
+  margin-right: 10px;
+}
